@@ -1,0 +1,12 @@
+.container {
+  background-color: #222;
+  border: 1px solid #fcdcbf;
+  border-radius: 24px;
+  color: #FFF;
+  cursor: pointer;
+  padding: 12px 24px;
+  pointer-events: auto;
+  &:hover {
+    background-color: lighten(#222, 10%);
+  }
+}

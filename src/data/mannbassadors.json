@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "city": "Abu Dhabi",
+    "episode": "6/3/2018",
+    "mannbassador": "Greg",
+    "coordinates": [24.453884, 54.377342],
+    "value": 1
+  },
+  {
+    "id": 2,
+    "city": "Adelaide",
+    "episode": "7/6/2018",
+    "mannbassador": "David",
+    "coordinates": [-34.928497, 138.600739],
+    "value": 1
+  },
+  {
+    "id": 3,
+    "city": "Austin, TX",
+    "episode": "5/4/2018",
+    "mannbassador": "Gary",
+    "coordinates": [30.267153, -97.743057],
+    "value": 1
+  },
+  {
+    "id": 4,
+    "city": "New York",
+    "episode": "2/8/2018",
+    "mannbassador": "Ken",
+    "coordinates": [40.712776, -74.005974],
+    "value": 1
+  },
+  {
+    "id": 5,
+    "city": "Chicago",
+    "episode": "5/5/2018",
+    "mannbassador": "Dave",
+    "coordinates": [41.878113, -87.629799],
+    "value": 1
+  },
+  {
+    "id": 6,
+    "city": "Kyoto, Japan",
+    "episode": "8/2/2018",
+    "mannbassador": "Laura",
+    "coordinates": [35.031940, 135.748047],
+    "value": 1
+  }
+]

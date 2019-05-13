@@ -1,0 +1,35 @@
+.details {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #FFF;
+
+  .content {
+    max-width: 30vw;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+    @media only screen and (max-width: 320px) {
+      max-width: 60vw;
+      right: 24px;
+    }
+  }
+
+  .detailsContent {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}

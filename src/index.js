@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import {initialState, reducer} from './state';
+import StateProvider from './state/StateProvider';
+
+const Root = () => {
+  return (
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <App />
+    </StateProvider>
+  );
+}
+
+ReactDOM.render(<Root />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
