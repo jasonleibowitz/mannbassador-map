@@ -1,7 +1,7 @@
-import data from '../data/mannbassadors.json';
+import markers from '../data/mannbassadors.json';
 
 export const initialState = {
-  markers: data,
+  markers,
   start: false,
 }
 

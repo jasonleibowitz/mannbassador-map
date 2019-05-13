@@ -13,10 +13,10 @@ module.exports = {
   },
   globeOptions: {
     cloudsSpeed: 0.2,
-    cloudsOpacity: 0.05,
+    cloudsOpacity: 0.2,
     glowCoefficient: 0.1,
     glowColor: '#fff9e6',
-    glowPower: 5,
+    glowPower: 3,
     glowRadiusScale: 0.2,
   },
   lightOptions: {
@@ -25,4 +25,15 @@ module.exports = {
     pointLightIntensity: 3,
     pointLightPositionRadiusScales: [-1, 1.5, -2.5],
   },
+  markerOptions: {
+    activeScale: 1.05,
+    animationDuration: 2000,
+    enableGlow: false,
+    enableTooltip: true,
+    getTooltipContent: marker => marker.destination,
+    glowCoefficient: 0,
+    glowPower: 3,
+    glowRadiusScale: 2,
+    radiusScaleRange: [0.005, 0.02],
+  }
 };

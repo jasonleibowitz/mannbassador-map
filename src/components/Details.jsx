@@ -8,12 +8,12 @@ const Details = () => {
   const { focusedMarker } = state;
 
   if (!focusedMarker) return null;
-  const { city, episode, mannbassador } = focusedMarker;
+  const { destination, episode, mannbassador } = focusedMarker;
 
   return (
     <div className={styles.details}>
       <div className={styles.content}>
-        <h2>{city}</h2>
+        <h2>{destination}</h2>
         <div className={styles.detailsContent}>
           <p>{`Mannbassador: ${mannbassador}`}</p>
           <p>{`Episode: ${episode}`}</p>

@@ -6,19 +6,15 @@ import styles from './Globe.module.scss';
 
 import { useStateValue } from '../state/StateProvider';
 
-import data from '../data/mannbassadors.json';
-
-const { cameraOptions, focusOptions, globeOptions } = config;
-
-const markerOptions = {
-  enableTooltip: true,
-  getTooltipContent: marker => `City: ${marker.city}, Mannbassador: ${marker.mannbassador}`,
-}
+const {
+  cameraOptions,
+  focusOptions,
+  globeOptions,
+  markerOptions,
+} = config;
 
 const Globe = () => {
-  const [state, dispatch] = useStateValue();
-  const { focusedMarker, start } = state;
-
+  const [{ markers, start }, dispatch] = useStateValue();
 
   function onClickMarker(marker) {
     dispatch({
@@ -33,17 +29,15 @@ const Globe = () => {
     })
   }
 
-  const markers = start ? data : [];
-  const focus = focusedMarker !== undefined ? focusedMarker.coordinates : undefined;
+  const data = start ? markers : [];
 
   return (
     <div className={styles.globe}>
       <ReactGlobe
         cameraOptions={cameraOptions}
-        focus={focus}
         focusOptions={focusOptions}
         globeOptions={globeOptions}
-        markers={markers}
+        markers={data}
         markerOptions={markerOptions}
         onClickMarker={onClickMarker}
         onDefocus={onDefocus}
