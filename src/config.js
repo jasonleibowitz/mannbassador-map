@@ -30,7 +30,7 @@ module.exports = {
     animationDuration: 2000,
     enableGlow: false,
     enableTooltip: true,
-    getTooltipContent: marker => marker.destination,
+    getTooltipContent: marker => marker.destinationName,
     glowCoefficient: 0,
     glowPower: 3,
     glowRadiusScale: 2,

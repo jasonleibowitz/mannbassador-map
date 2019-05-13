@@ -30,7 +30,7 @@ const Globe = () => {
   }
 
   const data = start ? markers : [];
-
+  console.log('/// markers', markers);
   return (
     <div className={styles.globe}>
       <ReactGlobe
