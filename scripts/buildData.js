@@ -20,7 +20,7 @@ const buildData = async () => {
   });
 
   const markers = await Promise.all(
-    preData.filter(v => !!v.destination).map(async obj => {
+    preData.filter(v => !!v.destination).map(async (obj, index) => {
       let coordinates = [];
       let results;
       if (obj.destination) {
@@ -33,6 +33,7 @@ const buildData = async () => {
 
           return {
             ...obj,
+            id: index,
             coordinates,
             value: 1,
           }

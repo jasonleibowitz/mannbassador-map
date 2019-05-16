@@ -9,6 +9,7 @@ module.exports = {
     enableZoom: false,
   },
   focusOptions: {
+    distanceRadiusScale: 1.5,
     enableDefocus: true,
   },
   globeOptions: {
@@ -24,16 +25,5 @@ module.exports = {
     ambientLightIntensity: 1,
     pointLightIntensity: 3,
     pointLightPositionRadiusScales: [-1, 1.5, -2.5],
-  },
-  markerOptions: {
-    activeScale: 1.05,
-    animationDuration: 2000,
-    enableGlow: false,
-    enableTooltip: true,
-    getTooltipContent: marker => marker.destinationName,
-    glowCoefficient: 0,
-    glowPower: 3,
-    glowRadiusScale: 2,
-    radiusScaleRange: [0.005, 0.02],
   }
 };
