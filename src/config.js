@@ -25,5 +25,16 @@ module.exports = {
     ambientLightIntensity: 1,
     pointLightIntensity: 3,
     pointLightPositionRadiusScales: [-1, 1.5, -2.5],
-  }
+  },
+  markerOptions: {
+  activeScale: 1.05,
+  animationDuration: 1000,
+  enableGlow: false,
+  enableTooltip: true,
+  getTooltipContent: marker => marker.destinationName,
+  glowCoefficient: 0,
+  glowPower: 5,
+  glowRadiusScale: 1.5,
+  radiusScaleRange: [0.005, 0.02],
+}
 };

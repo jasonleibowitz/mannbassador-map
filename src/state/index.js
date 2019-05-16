@@ -3,7 +3,7 @@ import markers from '../data/mannbassadors.json';
 export const initialState = {
   focusedMarker: undefined,
   markers,
-  start: true,
+  start: false,
 }
 
 export function reducer(state, action) {

@@ -5,11 +5,19 @@ import {
   Color,
 } from 'three';
 
-const renderer = marker => {
+const renderer = (marker, focusedMarker) => {
   const { value } = marker;
-  const scaledSize = value / 1;
+  let scaledSize = value * 2;
+
+  // if (focusedMarker && focusedMarker === marker) {
+  //   scaledSize = value * 1;
+  // }
+  if (focusedMarker) {
+    scaledSize = 0.3;
+  }
+
   const geometry = new SphereGeometry(scaledSize, 10, 10);
-  const material = new MeshLambertMaterial({  color: new Color('red') });
+  const material = new MeshLambertMaterial({  color: new Color('gold') });
 
   return new Mesh(geometry, material);
 };

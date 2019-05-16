@@ -11,20 +11,8 @@ const {
   cameraOptions,
   focusOptions,
   globeOptions,
+  markerOptions,
 } = config;
-
-const markerOptions = {
-  activeScale: 1.05,
-  animationDuration: 3000,
-  enableGlow: false,
-  enableTooltip: true,
-  getTooltipContent: marker => marker.destinationName,
-  glowCoefficient: 0,
-  glowPower: 3,
-  glowRadiusScale: 2,
-  radiusScaleRange: [0.005, 0.02],
-  renderer: markerRenderer,
-}
 
 const Globe = () => {
   const [{ focusedMarker, markers, start }, dispatch] = useStateValue();
@@ -57,7 +45,10 @@ const Globe = () => {
         lookAt={[51.507351, -0.127758]}
         globeOptions={globeOptions}
         markers={data}
-        markerOptions={markerOptions}
+        markerOptions={{
+          ...markerOptions,
+          renderer: (marker) => markerRenderer(marker, focusedMarker),
+        }}
         onClickMarker={onClickMarker}
         onDefocus={onDefocus}
       />
