@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStateValue } from '../state/StateProvider';
+import { useStateValue } from '../../state/StateProvider';
 
 import styles from './Details.module.scss';
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactGlobe from 'react-globe';
 
-import config from '../config';
+import config from '../../config';
 import styles from './Globe.module.scss';
-import { useStateValue } from '../state/StateProvider';
+import { useStateValue } from '../../state/StateProvider';
 
-import markerRenderer from '../markerRenderer';
+import markerRenderer from '../../utils/markerRenderer';
 
 const {
   cameraOptions,
@@ -47,7 +47,7 @@ const Globe = () => {
         markers={data}
         markerOptions={{
           ...markerOptions,
-          renderer: (marker) => markerRenderer(marker, focusedMarker),
+          ...focusedMarker && {renderer: (marker) => markerRenderer(marker, focusedMarker)}
         }}
         onClickMarker={onClickMarker}
         onDefocus={onDefocus}

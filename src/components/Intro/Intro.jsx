@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Button from './Button';
-import { useStateValue } from '../state/StateProvider';
+import Button from '../Button/Button';
+import { useStateValue } from '../../state/StateProvider';
 
 import logo from './logo.png';
 import styles from './Intro.module.scss';
