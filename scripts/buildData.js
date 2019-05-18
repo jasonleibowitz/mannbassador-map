@@ -45,6 +45,7 @@ const buildData = async () => {
   );
 
   fs.writeFileSync('./src/data/mannbassadors.json', JSON.stringify(markers));
+  console.log('Successfully updated mannbassador data');
 }
 
 buildData();
